@@ -4,11 +4,11 @@ Esta práctica consiste en hacer una pequeña página web estática haciendo ún
 >>>
 La temática para la página es sobre algún tipo de evento, en mi caso, eventos de RAP.
 
-**PORTADA.HTML**
+**PORTADA.HTML:**
 ![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/portada.png)
 
-**EVENTO.HTML**
+**EVENTO.HTML:**
 ![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/evento.jpg)
 
-**IMPRIMIR.HTML**
+**IMPRIMIR.HTML:**
 ![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/imprimir.jpg)
