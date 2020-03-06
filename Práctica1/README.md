@@ -8,7 +8,7 @@ La temática para la página es sobre algún tipo de evento, en mi caso, eventos
 ![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/portada.png)
 
 **EVENTO.HTML:**
-![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/evento.jpg)
+![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/evento.png)
 
 **IMPRIMIR.HTML:**
 ![](https://github.com/sergiovp/SIBW/blob/master/Práctica1/Capturas/imprimir.jpg)
