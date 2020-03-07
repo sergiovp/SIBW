@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <script src="Scripts/formulario_comentarios.js"></script>
     <script src="Scripts/ocultar_mostrar.js"></script>
-	<title>Inicio</title>
+	<title>Evento</title>
 </head>
 <body>
 	<header class="cabecera">
@@ -102,16 +102,15 @@
                         </div>
                     </div>
                 </div>
-                
 
                 <div class="datos_formulario" id="tres">
                     <label for="nombre">Nombre:</label>
-                    <input id="nombre" value="aaa" type="text" placeholder="Nombre...">
+                    <input id="nombre" type="text" placeholder="Nombre...">
                     <label for="correo">E-mail:</label>
-                    <input id="correo" type="text" value="aa@hotmail.com" placeholder="Correo...">
+                    <input id="correo" type="text" placeholder="Correo...">
                     <label for="comentario">Comentario:</label>
                     <textarea name="" class="comentarios" id="comentario"
-                         placeholder="Comentario..." onkeyup="checkProhibicion(event);" >aaa</textarea>
+                         placeholder="Comentario..." onkeyup="checkProhibicion(event);" ></textarea>
                     <input class="enviar_datos" type="submit" value="Enviar" onclick="aniadirComentario();">
                 </div>
                 <div id="hecho">
