@@ -1,6 +1,6 @@
 /* Variables globales */
 var palabra = "";
-tamanio = 0;
+var tamanio = 0;
 
 var palabrasProhibidas =[
     "alcohol",
