@@ -14,6 +14,7 @@ var palabrasProhibidas =[
     "vodka",
     "ginebra"
 ];
+var contador = 0;
 
 /* Comprobamos que el formulario ha sido completado correctamente */
 function validarFormulario() {
@@ -67,7 +68,7 @@ function validarFormulario() {
 function aniadirComentario() {
 
     if (validarFormulario()) {
-        var nombre, correo, comentario;
+        var nombre, email, comentario;
 
         nombre = document.getElementById("nombre").value;
         email = document.getElementById("correo").value;
@@ -76,18 +77,17 @@ function aniadirComentario() {
         var fecha = new Date().toLocaleDateString();
         var tiempo = new Date();
         var hora = tiempo.getHours() + ":" + tiempo.getMinutes();
+        var comentatios_anteriores = document.getElementsByClassName("comentarios_estaticos");
 
-        var HTML = "<div class=\"insertar\"><textarea class=\"comentarios\" readonly>" + comentario +
+        contador++;
+        var comentario_hecho = "<h2 class=\"h2_comentario\">Comentario "+ contador +" añadido correctamente</h2>";
+
+        comentatios_anteriores[0].insertAdjacentHTML('beforeend', 
+        "<div class=\"insertar\"><textarea class=\"comentarios\" readonly>" + comentario +
                 "</textarea><div class=\"datos_usuario\"><p>"+ nombre + "</p><p>" + 
-                        fecha + " | " + hora + "</p></div></div>";
- 
-        var comentario_anterior = document.getElementById("uno").innerHTML + 
-                document.getElementById("dos").innerHTML;
+                        fecha + " | " + hora + "</p></div></div>");
 
-        var comentario_hecho = "<h2 class=\"h2_comentario\">Comentario añadido correctamente</h2>";
-    
-        document.getElementById("parte_formulario").innerHTML = 
-                comentario_anterior + HTML + comentario_hecho;
+        document.getElementById("hecho").innerHTML = comentario_hecho;
 
         return true;
 
