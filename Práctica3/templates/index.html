@@ -1,0 +1,76 @@
+{% extends "padre.html" %}
+
+{% block titulo_pagina %}
+    Inicio
+{% endblock %}
+
+{% block menu_seleccionado %}
+    <li id="seleccionado" class="elemento_menu"><a href="../index.php">Inicio</a></li>
+    <li id="ocultar" class="elemento_menu"><a href="">Evento</a></li>
+{% endblock %}
+
+{% block bloque_central %}
+<main class="principal">
+
+    <section class="seccion_evento">
+        <img src="Images/denom.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Denom</a>
+        <p class="tipo_evento">Concierto</p>
+        <p class="descripcion_evento"><span>Denom</span>, como sabemos es un chico de Madrid que viene pisando
+            fuerte desde que debutó con su disco "<span>Una parte de mí</span>"
+            en el año 2016.
+        </p>
+    </section>
+
+    <section class="seccion_evento">
+        <img src="Images/natosywaor.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Natos y Waor</a>
+        <p class="tipo_evento">Firma de disco</p>
+        <p class="descripcion_evento"><span>Natos y Waor</span>, sin lugar a dudas están en la cúspide
+            del panorama nacional en cuanto a RAP se refiere. Lo quieren celebrar
+            brinando a sus fans la oportunidad de tener su disco "<span>Cicatrices</span>"
+            firmado por ellos mismos.
+        </p>
+    </section>
+
+    <section class="seccion_evento">
+        <img src="Images/notorious.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Notorious Big</a>
+        <p class="tipo_evento">Tributo a uno de los padres del RAP</p>
+        <p class="descripcion_evento">La cadena de televisión <span>MTV</span> ha organizado un programa
+            especial para recordar al que sin duda alguna, es uno de 
+            los padres del <span>RAP</span>.
+        </p>
+    </section>
+
+    <section class="seccion_evento">
+        <img src="Images/wiz.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Wiz Khalifa</a>
+        <p class="tipo_evento">Concierto en festival</p>
+        <p class="descripcion_evento">Tenemos el gusto de anunciar que el cantante estadounidense
+            <span>Wiz Khalifa</span> actuará en el festival <span>DreamFestival</span>.
+        </p>
+    </section>
+
+    <section class="seccion_evento">
+        <img src="Images/miranda.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Miranda</a>
+        <p class="tipo_evento">Presentación de canción</p>
+        <p class="descripcion_evento">Tenemos el gusto de anunciar que 
+            el cantante <span>Miranda</span>
+            presentará una nueva canción, llamada "<span>Latidos</span>" Puedes escuchar la canción 
+        <a target="_blank" id="cancion_miranda" href="https://www.youtube.com/watch?v=anr-eZ4C4jo">aquí</a>.
+        </p>
+    </section>
+
+    <section class="seccion_evento">
+        <img src="Images/nach.jpg" alt="Imagen Evento">
+        <a class="nombre_artista" href="evento.html">Nach</a>
+        <p class="tipo_evento">Repaso de carrera musical</p>
+        <p class="descripcion_evento">Ignacio, más conocido como <span>Nach</span> hará un concierto 
+            haciendo un repaso de sus canciones más emblemáticas.
+        </p>
+    </section>
+
+</main>
+{% endblock %}
