@@ -15,7 +15,6 @@
     if (!$evento) {
         echo $twig->render('error.html');
     } else {
-        getPalabrasProhibidas();
         echo $twig->render('evento.html',['evento' => $evento]);
     }
 

@@ -14,10 +14,11 @@
     {% for i in lista_eventos %}
     <section class="seccion_evento">
         <img src="{{ i.img }}" alt="Imagen Evento">
-        <a class="nombre_artista" href="evento.php?ev={{ i.id }}">{{ i.nombre_artista }}</a>
+        <a class="nombre_artista" href="evento.php">{{ i.nombre_artista }}</a>
         <p class="tipo_evento">{{ i.tipo_evento }}</p>
         <p class="descripcion_evento">{{ i.descripcion }}</p>
     </section>
     {% endfor %}
+
 </main>
 {% endblock %}

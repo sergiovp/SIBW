@@ -56,24 +56,9 @@
                 array_push($array, $arrayInfo);
             }
         }
+
         return $array;
-    }
-
-    function getPalabrasProhibidas() {
-        $mysqli = conexionBD();
-
-        $res = $mysqli->query(("SELECT * FROM palabras_prohibidas"));
-
-        $array = array();
-
-        if ($res->num_rows > 0) {
-            while ($row = $res->fetch_assoc()) {
-                $arrayInfo = $row['palabra_prohibida'];
-
-                array_push($array, $arrayInfo);
-            }
-        }
-        //print_r($array);
-        return $array;
+        //print_r($array[1]);
+        
     }
 ?>
