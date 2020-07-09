@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="SergioVela">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <script src="Scripts/formulario_comentarios.js"></script>
+    <script src="Scripts/ocultar_mostrar.js"></script>
+    <script src="Scripts/buscador.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>
+        {% block titulo_pagina %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+	<header class="cabecera">
+        <div class="agrupacion_header">
+            <section class="cabecera_imagen">
+                <img src="Images/descarga.png" alt="Logo">
+            </section>
+    
+            <div class="nombre_menu">
+                <section class="cabecera_nombre">
+                    <p>RAP EVENTS</p>
+                </section>
+                {% block menu_entero %}
+                <nav>
+                    <ul class="menu_principal">
+                        {% block menu_seleccionado %}
+
+                        {% endblock %}
+                    </ul>
+                </nav>
+                {% endblock %}
+            </div> 
+        </div>
+        <!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+        <div class="informacion_usu">
+        {% if not user %}
+            <div>
+                <p>NO estás logueado. <a href="login.php">Logueate</a></p>
+            </div>
+      
+        {% else %}
+            <div>
+                <p>SÍ esas logueado. Tu nick es <strong>{{ user.user }}</strong>.</p>
+                <a href="modificardatos.php">Modificar mis datos</a>
+            </div>
+        {% if user.admin %}
+            <div>
+                <p>¡Además eres un superusuario!</p>
+                <a href="borrarevento.php">Borrar evento</a>
+            </div>
+        {% endif %}
+            <div>
+                <p><a href="logout.php">Salir</a></p>
+            </div>
+        </div>
+        
+    {% endif %}
+    <div>
+        <div style="text-align: center;">
+            <input type="text" name="buscador" id="buscador" placeholder="Buscador de eventos..." onkeyup="buscarEvento()"/>
+        </div>
+        <div id="mostrar_eventos" style="text-align: center;">
+
+        </div>
+    </div>
+        
+    <!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
+    </header>
+    
+    {% block bloque_central_pagina_error %}
+        
+    {% endblock %}
+
+    <div class="pagina_central">
+        {% block bloque_central %}
+        
+        {% endblock %}
+
+        {% block seccion_enlaces_entera %}
+        <aside class="lateral_enlaces_interes">
+            {% block seccion_comentarios_eventos %}
+
+            {% endblock %}
+            <div class="enlaces" id="parte_enlaces">
+                <h2>Enlaces de interés</h2>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://es.wikipedia.org/wiki/Rap">¿Qué es el RAP?</a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="http://algoderap.blogspot.com">Blog sobre las últimas 
+                        canciones de tus artistas favoritos
+                    </a>
+                </section>
+                
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.dodmagazine.es/mejores-frases-rap-en-espanol/">
+                        Las 35 mejores frases de RAP españolas
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://open.spotify.com/playlist/7ngsn0HPXogtsHHIEZ6CpH">
+                        Playlist de Spotify de RAP español
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://rateyourmusic.com/list/hhhccc/las_100_mejores_canciones_del_rap_espanol/">
+                        100 mejores canciones de RAP español de los años 2000
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.last.fm/es/tag/rap/artists">
+                        Artistas de RAP
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.20minutos.es/minuteca/rap/">
+                        Últimas noticias de RAP
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=Zl8W6ddWfM8">
+                        RAP contra el racismo
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=J77qIAr8PjQ">
+                        ZPU y NACH - Noches en BCN directo
+                    </a>
+                </section>
+
+                <section class="seccion_lateral">
+                    <a target="_blank" href="https://www.allcitycanvas.com/clasicos-del-rap-que-no-debes-dejar-pasar">
+                        Clásicos del rap que no debes dejar pasar
+                    </a>
+                </section>
+            </div>
+        </aside>
+        {% endblock %}
+    </div>
+
+	<footer class="pie_pagina">
+        <div class="pie_contacto">
+            <section class="seccion_contacto_footer">
+                <img class="imagen_footer" src="Images/gmail.png" alt="Icono email">
+                <p class="texto_contacto">rapevents@gmail.com</p>
+            </section>
+
+            <section class="seccion_contacto_footer">
+                <img class="imagen_footer" src="Images/whatsapp.png" alt="Icono WhatsApp">
+                <p class="texto_contacto">345 635 938</p>
+            </section>
+
+            <section class="seccion_contacto_footer">
+                <img class="imagen_footer" src="Images/facebook.png" alt="Icono FaceBook">
+                <p class="texto_contacto">RapEvents</p>
+            </section>
+
+            <section class="seccion_contacto_footer">
+                <img class="imagen_footer" src="Images/instagram.png" alt="Icono Instagram">
+                <p class="texto_contacto">@rapevents</p>
+            </section>
+        </div>
+
+        <section class="seccion_copyright">
+            <p class="mensaje_copy">Copyright © Todos los derechos reservados al autor Sergio Vela Pelegrina</p>
+        </section>
+	</footer>
+</body>
+</html>
