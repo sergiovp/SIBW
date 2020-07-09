@@ -1,0 +1,86 @@
+{% extends "padre.html" %}
+
+{% block titulo_pagina %}
+    Evento
+{% endblock %}
+
+{% block menu_seleccionado %}
+    <li id="elemento_menu" class="elemento_menu"><a href="../index.php">Inicio</a></li>
+    <li id="seleccionado" class="elemento_menu"><a href="../evento.php?ev={{ evento.id }}">Evento</a></li>
+{% endblock %}
+
+{% block bloque_central %}
+<main class="principal">
+
+    <section class="evento_descripcion">
+        <h1>{{ evento.tituloEvento }}</h1>
+        <h2>{{ evento.lugarEvento }}</h2>
+        <h3>{{ evento.fechaEvento }}</h3>
+        <div class="agrupar_imagenes">
+            <img src="{{ evento.img1 }}" alt="Imagen Evento">
+            <img src="{{ evento.img2 }}" alt="Imagen Evento">
+        </div>
+        <div class="artista_contacto">
+            <section class="seccion_contacto_artista">
+                <a target="_blank" href="{{ evento.instagram }}"><img class="imagen_footer" src="Images/instagram.png" alt="Icono Instagram"></a>
+            </section>
+            <section class="seccion_contacto_artista">
+                <a target="_blank" href="{{ evento.youtube }}"><img class="imagen_footer" src="Images/youtube.png" alt="Icono YouTube"></a>
+            </section>
+            <section class="seccion_contacto_artista">
+                <a target="_blank" href="{{ evento.facebook }}">
+                    <img class="imagen_footer" src="Images/facebook.png" alt="Icono WhatsApp"></a>
+            </section>
+        </div>
+        <p class="evento_info_principal">
+            {{ evento.descripcion_principal }}
+        </p>
+        <p class="evento_info_principal">
+            {{ evento.descripcion_secundaria }}
+        </p>
+        <p class="evento_info_sec">
+            {{ evento.aviso }}
+        </p>  
+    </section>
+
+    {% for i in palabrasProhibidas %}
+        <p class="p_prohibidas">{{ i }}</p>
+    {% endfor %}
+
+</main>
+{% endblock %}
+
+{% block seccion_comentarios_eventos %}
+<div class="comentario">
+    <h2 class="h2_comentario">Déjanos un comentario</h2>
+    <button class="boton_comenta" onclick="ocultarMostrar();"></button>
+</div>
+
+<div class="formulario" id="parte_formulario">
+    <div class="comentarios_estaticos">
+        {% for i in comentarios %}
+            <div class="insertar" id="{{ i.id }}">
+                <textarea name="" class="comentarios" id="" readonly>{{ i.comentario }}</textarea>
+                <div class="datos_usuario">
+                    <p>{{ i.autor }}</p>
+                    <p>{{ i.fecha }} | {{ i.hora}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="datos_formulario" id="tres">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" placeholder="Nombre...">
+        <label for="correo">E-mail:</label>
+        <input id="correo" type="text" placeholder="Correo...">
+        <label for="comentario">Comentario:</label>
+        <textarea name="" class="comentarios" id="comentario"
+             placeholder="Comentario..." onkeyup="checkProhibicion(event);" ></textarea>
+        <input class="enviar_datos" type="submit" value="Enviar" onclick="aniadirComentario();">
+    </div>
+    <div id="hecho">
+
+    </div>
+</div>
+{% endblock %}
