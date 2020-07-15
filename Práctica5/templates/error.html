@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% block titulo_pagina %}
+    Error
+{% endblock %}
+
+{% block menu_entero %}
+{% endblock %}
+
+{% block seccion_enlaces_entera %}
+{% endblock %}
+
+{% block bloque_central_pagina_error %}
+    <div id="error">
+        <h1>¡Parece que hubo un error!</h1>
+        <img src="Images/error2.png" alt="Imagen de rror">
+        <p class="mensaje_error">La página a la que intentas acceder no existe, te aconsejamos que vuelvas a</p>
+        <a class="nombre_artista" href="../index.php">inicio</a>
+    </div>
+{% endblock %}

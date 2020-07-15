@@ -1,0 +1,86 @@
+{% extends "login.html" %}
+
+{% block tit %}
+	<title>Añade evento</title>
+{% endblock %}
+
+{% block titulo %}
+	<span class="login100-form-title p-b-34 p-t-27">
+		Rellene el formulario
+	</span>
+{% endblock %}
+
+{% block formulario %}
+	<form action="aniadir.php" class="login100-form validate-form">
+{% endblock %}
+
+{% block boton %}
+	<div class="container-login100-form-btn">
+		<button class="login100-form-btn" onclick="validacion();">
+			Añadir
+		</button>
+	</div>
+{% endblock %}
+
+{% block mainform %}
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="imgportada" id="imgportada" placeholder="Imagen de portada">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="nombre_artista" id="nombre_artista" placeholder="Nombre del artista">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="tipo_evento" id="tipo_evento" placeholder="Tipo de evento">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="descripción" id="descripción" placeholder="Pequeña descripción">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="lugar" id="lugar" placeholder="Lugar del evento">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="fecha_evento" id="fecha_evento" placeholder="Fecha del evento">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="img1" id="img1" placeholder="Imagen 1">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="img2" id="img2" placeholder="Imagen 2">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="instagram" id="instagram" placeholder="Instagram">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="youtube" id="youtube" placeholder="Youtube">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="facebook" id="facebook" placeholder="Facebook">
+</div>
+
+<div class="wrap-input100 validate-input" id="d_p">
+    <input class="input100" type="text" name="descripcion_p" id="descripcion_p" placeholder="Descripción principal">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="descripcion_s" id="descripcion_s" placeholder="Descripción secundaria">
+</div>
+
+<div class="wrap-input100 validate-input">
+    <input class="input100" type="text" name="aviso" id="aviso" placeholder="Aviso">
+</div>
+
+{% endblock %}
+
+{% block reg %}
+{% endblock %}
