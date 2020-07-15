@@ -1,0 +1,439 @@
+/*********************************************************/
+/*********************************************************/
+/* Le quito los márgenes al body */
+body {
+    margin: 0;
+    font-family: PT Sans Narrow;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para el Header (Cabecera) */
+.cabecera {
+    background-color: #C1D0D9;
+    border-bottom: solid;
+    border-width: thin;
+    border-bottom-color: #8E9EBF;
+}
+
+.cabecera_imagen img {
+    width: 5em;
+    height: 5em;
+    margin-top: 15%;
+}
+
+.nombre_menu {
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.agrupacion_header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.cabecera_nombre {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: Lacquer;
+}
+
+.cabecera_nombre p{
+    margin: 0;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para el Nav (Menú) */
+.menu_principal {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    font-weight: bolder;
+    font-family: Lacquer;
+}
+
+/* Ocualtamos el menú "evento" */
+#ocultar {
+    display: none;
+}
+
+li.elemento_menu a{
+    min-width: 10vmax;
+}
+
+.elemento_menu a:link, .elemento_menu a:visited {
+    background-color: cadetblue;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.elemento_menu a:hover, .elemento_menu a:active {
+    background-color: darkcyan;
+}
+
+#seleccionado a:link, #seleccionado a:visited{
+    background-color: darkcyan;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para la página central de la "PORTADA" */
+.pagina_central {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+.principal {
+   text-align: center;
+}
+
+.seccion_evento {
+    display: inline-table;
+    margin-right: 2em;
+    margin-left: 2em;
+    max-width: 20%;
+}
+
+.seccion_evento img {
+    min-width: 12em;
+    max-width: 12em;
+    min-height: 12em;
+    max-height: 12em;
+}
+
+.lateral_enlaces_interes {
+    border-left: solid;
+    border-color: #C1D0D9;
+    border-width: thin;
+    text-align: center;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lateral_enlaces_interes h2 {
+    text-decoration: underline;
+    text-decoration-color: #C1D0D9;
+    color: black;
+    margin-bottom: 1.5em;
+}
+
+.nombre_artista {
+    font-weight: bolder;
+    font-family: Lacquer;
+    color: black;
+    width: 9em;
+}
+
+/* Cuando pulsemos un evento en contreto se mostrará el menú "evento" */
+.nombre_artista:checked ~ ocultar {
+    display: inline;
+}
+
+.seccion_lateral {
+    margin-left: 2vmax;
+    margin-right: 2vmax;
+    margin-bottom: 2vmax;
+}
+
+.seccion_lateral a {
+    font-size: 1.3em;
+}
+
+.seccion_lateral a:link, .seccion_lateral a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.seccion_lateral a:hover, .seccion_lateral a:active {
+    text-decoration: underline;
+    color: #585C73;
+}
+
+.nombre_artista:link, .nombre_artista:visited {
+    background-color: cadetblue;
+    color: black;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.nombre_artista:hover, .nombre_artista:active {
+    background-color: darkcyan;
+}
+
+#cancion_miranda:link, #cancion_miranda:visited {
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+#cancion_miranda:hover, #cancion_miranda:active {
+    text-decoration: underline;
+    color: darkcyan;
+}
+
+.seccion_evento span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.tipo_evento {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+    text-decoration: underline;
+}
+
+.descripcion_evento {
+    margin-top: 0;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para la página central del "EVENTO" */
+.evento_descripcion h1 {
+    font-size: 7vmax;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.evento_descripcion h2 {
+    font-size: 3vmax;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.evento_descripcion h3 {
+    font-size: 2vmax;
+    text-align: center;
+}
+
+.agrupar_imagenes {
+    display: inline;
+}
+
+.agrupar_imagenes img{
+    height: 30vh;
+    width: 45vh;
+}
+
+.evento_info_principal {
+    text-align: center;
+    font-size: 1.4em;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.evento_info_principal span {
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.evento_info_sec {
+    color: red;
+    margin-top: 10%;
+    font-size: 1.2em;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para el Footer (Pie de página) */
+.pie_pagina {
+    margin-top: 1.2em;
+    border-top: solid;
+    border-width: thin;
+    background-color: #C1D0D9;
+    border-top-color: #8E9EBF;
+}
+
+.imagen_footer {
+    width: 1.2pc;
+    height: 1.2pc;
+}
+
+.pie_contacto {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.texto_contacto {
+    margin-left: 0.3em;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.seccion_contacto_footer {
+    display: flex;
+    align-items: center;
+}
+
+.mensaje_copy {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.seccion_copyright {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para la página "IMPRIMIR" */
+#infor_imprimir1, #infor_imprimir2, #infor_imprimir3 {
+    max-width: 50%;
+    margin-top: 1%;
+    margin-left: 25%;
+}
+
+/****************
+ARTISTA
+****************/
+.artista_contacto {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+}
+
+.seccion_contacto_artista {
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para el formulario de la página "EVENTO" */
+.datos_formulario {
+    display: flex;
+    align-items: center; /* Podría ser baseline */
+    flex-direction: column;
+}
+
+.formulario {
+    display: none;
+}
+
+.formulario input {
+    width: 70%;
+}
+
+.comentarios {
+    width: 70%;
+    height: 8em;
+}
+
+.imagen_comenta {
+    width: 2pc;
+    height: 2pc;
+}
+
+.comentario {
+    display: flex;
+    justify-content: center;
+}
+
+.h2_comentario {
+    margin: 0;
+    margin-right: 1em;
+}
+
+.boton_comenta {
+    height: 2pc;
+    width: 2pc;
+    border: none;
+    cursor: pointer;
+    background: url(../Images/menu.png) no-repeat center;
+    margin-bottom: 2em;
+}
+
+.boton_comenta:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.datos_usuario {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.datos_usuario p {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.enviar_datos {
+    margin-top: 1em;
+}
+
+input[type=submit] {
+    background-color: #C1D0D9;
+    color: black;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #8E9EBF;
+}
+
+.comentarios_estaticos {
+    max-height: 25em;
+    overflow-y: scroll;
+    margin-bottom: 10%;
+}
+
+#hecho {
+    margin-top: 2em;
+}
+
+/*********************************************************/
+/*********************************************************/
+/* Reglas para la página "ERROR" */
+#error {
+    text-align: center;
+    color: red;
+}
+
+#error img {
+    height: 15em;
+    width: 25em;
+}
+
+.mensaje_error {
+    font-size: 1.5em;
+}
+
+.p_prohibidas {
+    display: none;
+}
+
+.informacion_usu {
+    text-align: center;
+}
+
+#buscador {
+    margin-bottom: 1em;
+}
+
+.form-aniadir {
+    display: block;
+}
